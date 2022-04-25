@@ -19,8 +19,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "test": "react-scripts test",
+    "install": "cd server && npm i && cd ../client && npm i",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
